@@ -1,0 +1,116 @@
+.products{
+	width: 1180px;
+	margin: 0 auto;
+	margin-bottom: 145px;
+	@media screen and (max-width:480px){
+		width: 440px;
+	}
+	&__table-cell{
+		width: 295px;
+		height: 295px;
+		text-align: center;
+		background-color: #cacaca;
+		color: #fff;
+		box-sizing: border-box;
+		padding: 0 50px;
+		@media screen and (max-width:480px){
+				display: none;
+				width: 440px;
+				background-color: #767676;
+				height: 290px;
+			}
+		&--grey-light{
+			background-color: #d2d2d2;	
+		}
+		&--grey-dark{
+			background-color: #bbbbbb;
+		}
+		&--grey-darker{
+			background-color: #606060;
+			@media screen and (max-width:480px){
+				height: 200px;
+			}
+		}
+		&--visible-mobile{
+			@media screen and (max-width:481px){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&:nth-child(3){
+				background-color: #828282;
+				}
+			}
+			
+		}
+		&--descktop-hidden{
+			@media screen and (min-width:481px){
+				display: none;
+			}
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&:nth-child(4){
+				background-color: #606060;
+				height: 190px;
+			}
+			&:nth-child(5){
+				background-color: #828282;
+			}
+		}
+	}
+	&__twitter{
+		background-color: #ccc;
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		margin-bottom: 30px;
+		position: relative;
+		&:before,&:after{
+			content: '';
+			position: absolute;
+			width: 22px;
+			height: 1px;
+			background-color: #fff;
+			top: 50%;
+			transform:tanslateY(-50%);
+		}
+		&:after{
+			right:-36px;
+		}
+		&:before{
+			left:-36px;
+		}
+	}
+	&__twitter-desc{
+		font-family: Georgia;
+		font-style: italic;
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	&__title{
+		font-family: lato;
+		font-weight: 700;
+		font-size: 24px;
+		margin-bottom: 14px;
+		text-transform: uppercase;
+		margin: 0 auto;
+	}
+	&__subtitle{
+		font-family: Gerogia;
+		font-size: 18px;
+		font-style: italic;
+		text-transform: uppercase;
+	}
+	&__arrow{
+		@media screen and (max-width:480px){
+				transform:rotate(90deg);
+			}
+		display: inline-block;
+		width: 27px;
+		height: 13px;
+		background-color: #000;
+		margin-bottom: 14px;
+	}
+}

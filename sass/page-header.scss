@@ -1,0 +1,13 @@
+.page-header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 1180px;
+	margin: 0px auto;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 35px 0px;
+	@media screen and (max-width: 480px){
+			padding: 20px 0px;
+			width: 440px;
+		}
+}

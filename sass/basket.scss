@@ -1,0 +1,325 @@
+.basket{
+	width: 1180px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	@media screen and (max-width:480px){
+			width: 440px;
+	}
+	&__mobile-group{
+		display: flex;
+		align-items: center;
+		@media screen and (max-width:480px){
+			width: 230px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+	}
+	&__row{
+		display: flex;
+		border-bottom: 1px solid #e5e5e5;
+		align-items: center;
+		@media screen and (max-width:480px){
+		align-items: center;
+		justify-content: flex-start;
+		}
+
+		.basket__mobile-group>[class^="basket"]{
+			@media screen and (max-width:480px){
+			width: auto;
+			}
+		}
+		.basket__head-cell:nth-child(1){
+			width: 135px;
+		}
+		.basket__head-cell:nth-child(2){
+			width: 587px;
+		}
+		.basket__head-cell:nth-child(3){
+			width: 157px;
+		}
+		.basket__head-cell:nth-child(4){
+			width: 105px;
+		}
+		.basket__head-cell:nth-child(5){
+			width: 102px;
+		}
+		.basket__head-cell:nth-child(6){
+			width: 92px;
+		}
+	}
+	&__head-cell{
+		font-family: lato;
+		font-size: 12px;
+		color: #909090;
+		padding-bottom: 12px;
+		text-transform: uppercase;
+		&:first-child{
+			padding-left: 10px;
+		}
+		@media screen and (max-width:480px){
+			font-size: 0;
+		}
+	}
+	&__product-img{
+		padding: 17px 25px 17px 10px;
+		width: 135px;
+		@media screen and (max-width:480px){
+			padding-left: 0;
+			width: 105px;
+			padding-right: 20px;
+		}
+		
+	}
+	&__img-container{
+		width: 100px;
+		height: 100px;
+		border: 1px solid #e5e5e5;
+		background-color: #f7f7f7;
+		@media screen and (max-width:480px){
+			height: 160px;
+			width: 104px;
+		}
+	}
+	&__product-name{
+		font-family: lato;
+		font-size: 14px;
+		color: #303030;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		font-weight: 700;
+		@media screen and (max-width:480px){
+			text-transform: none;
+			margin-bottom: 18px;
+		}
+	}
+	&__product-ref{
+		font-family: lato;
+		font-style: italic;
+		font-size: 12px;
+		margin: 0;
+		color: #606060;
+
+	}
+	&__product-description{
+		width: 587px;
+		box-sizing: border-box;
+		@media screen and (max-width:480px){
+			width: auto;
+			margin-bottom: 18px;
+		}
+	}
+
+	&__product-color{
+		font-family: lato;
+		font-size: 14px;
+		color: #303030;
+		width: 157px;
+		@media screen and (max-width:480px){
+			display:inline-block;
+			border: none;
+			margin-bottom: 18px;
+			font-weight: 700;
+			&:before{
+				content: 'Color:';
+				font-weight: normal;
+			}
+		}
+	}
+	&__product-size{
+		font-family: lato;
+		font-size: 14px;
+		color: #303030;
+		width: 100px;
+		@media screen and (max-width:480px){
+			font-weight: 700;
+			position: relative;
+			border: none;
+			margin-bottom: -10px;
+			&:before{
+				content: 'Size:';
+				font-weight: normal;
+			}
+		}
+	}
+	&__product-count{
+		width: 100px;
+		position: relative;
+		@media screen and (max-width:480px){
+			display: none;
+		}
+	}
+	&__product-number{
+		font-family: lato;
+		font-size: 14px;
+		color: #303030;
+		
+	}
+	&__count-controls{
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: 72px;
+		top: 50%;
+		transform:translateY(-50%);
+	}
+	&__control{
+		width: 11px;
+		height: 11px;
+		background-color: #303030;
+		margin-bottom: 2px;
+		position: relative;
+		cursor: pointer;
+	}
+	&__control--minus:before{
+			content:'';
+			position: absolute;
+			width: 5px;
+			height: 1px;
+			background-color: #fff;
+			left: 3px;
+			top: 5px;
+	}
+	&__control--plus:after{
+			content:'';
+			position: absolute;
+			width: 7px;
+			height: 1px;
+			background-color: #fff;
+			left: 2px;
+			top: 5px;
+	}
+	&__control--plus:before{
+			content:'';
+			transform:rotate(90deg);
+			position: absolute;
+			width: 7px;
+			height: 1px;
+			background-color: #fff;
+			left: 2px;
+			top: 5px;
+	}
+	&__amount{
+		font-family: lato;
+		font-size: 14px;
+		color: #303030;
+		width: 65px;
+		padding-right: 35px;
+		position: relative;
+		text-align: right;
+		@media screen and (max-width:480px){
+			width: 65px;
+			align-self: flex-end;
+			margin-bottom: 30px;
+		}
+	}
+	&__product-delete{
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		transform:translateY(-50%);
+		cursor: pointer;
+	}
+	&__product-delete:before,&__product-delete:after{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		width: 12px;
+		height: 1px;
+		background-color: #595959;
+	}
+	&__product-delete:before{
+		transform:rotate(45deg);
+	}
+	&__product-delete:after{
+		transform:rotate(-45deg);
+	}
+	&__subtotal-container{
+		
+	}
+	&__subtotal{
+		text-align: right;
+		padding-right: 45px;
+		padding-top: 20px;
+		padding-bottom: 25px;
+		margin-top: 4px;
+		margin-bottom: 45px;
+		background-color: #f9f9f9;
+		@media screen and (max-width:480px){
+			text-align: center;
+			padding-right: 0;
+		}
+
+	}
+	&__subtotal-title{
+		font-family: lato;
+		font-size: 14px;
+		font-weight: 700;
+		margin-right: 28px;
+		@media screen and (max-width:480px){
+			font-size: 24px;
+		}
+	}
+	&__subtotal-price{
+		font-family: lato;
+		font-size: 14px;
+		font-weight: 700;
+		color: #f68236;
+		@media screen and (max-width:480px){
+			font-size: 24px;
+		}
+	}
+	&__buttons{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		@media screen and (max-width:480px){
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 78px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+	}
+	&__order-now{
+		min-width: 190px;
+		padding: 20px;
+		background-color: #f68236;
+		border: 1px solid #e67429;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		font-family: lato;
+		font-weight: 400;
+		font-size: 14px;
+		text-transform: uppercase;
+		transition: 0.2s all ease;
+		&:hover{
+			background-color: #717171;
+			border: 1px solid #717171;
+		}
+		@media screen and (max-width:480px){
+			width: 440px;
+			box-sizing: border-box;
+			font-size: 0;
+			span{
+				font-size: 20px;
+				color: #FFF;
+				text-transform: uppercase;
+				font-family: lato;
+			}
+		}
+	}
+	&__continue-shopping{
+		font-family: lato;
+		font-weight: 400;
+		color: #303030;
+		font-size: 14px;
+		@media screen and (max-width:480px){
+			margin-bottom: 60px;
+			font-size: 20px;
+		}
+	}
+
+}
+

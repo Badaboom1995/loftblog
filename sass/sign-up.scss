@@ -1,0 +1,44 @@
+.sign-up{
+	text-align: center;
+	margin-bottom: 133px;
+	@media screen and (max-width:480px){
+			margin-bottom: 85px;
+		}
+	&__title{
+		font-family: lato;
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		color: #303030;
+	}
+	&__subtitle{
+		font-family: georgia;
+		font-size: 18px;
+		font-style: italic;
+		color: #606060;
+		margin-bottom: 55px;
+	}
+	&__form{
+		display: flex;
+		justify-content: center;
+	}
+	&__mail{
+		padding: 22px 13px;
+		border: 1px solid #959595;
+		border-right:none;
+		width: 475px;
+	}
+	&__submit{
+		padding: 23px 38px;
+		background-color: #f68236;
+		color: #fff;
+		border: 1px solid #e67429;
+		transition:0.2s all ease;
+		cursor: pointer;
+		&:hover{
+			background-color: #717171;
+			border: 1px solid #717171;
+		}
+	}
+}

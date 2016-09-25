@@ -1,0 +1,48 @@
+.basket-promo{
+	text-align: center;
+	margin-bottom: 133px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	@media screen and (max-width:480px){
+		margin-bottom: 90px;
+	}
+	&__title{
+		font-family: lato;
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		color: #303030;
+	}
+	&__subtitle{
+		font-family: georgia;
+		font-size: 18px;
+		font-style: italic;
+		color: #606060;
+		margin-bottom: 55px;
+	}
+	&__breadcrumbs{
+		@media screen and (max-width:480px){
+		display: flex;
+		justify-content: center;
+		font-family: lato;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: #606060;
+		margin-top: -45px;
+		margin-bottom: 65px;
+		}
+		display: none;
+		
+	}
+	&__breadcrumbs-item:after{
+		content: "/";
+		width: 40px;
+		text-align: center;
+		display: inline-block;
+	}
+	&__breadcrumbs-item:last-child::after{
+		content: "";
+		width: 0px;
+	}
+}

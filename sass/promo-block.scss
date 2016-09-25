@@ -1,0 +1,22 @@
+.promo-block{
+	padding: 145px 0px;
+	text-align: center;	
+	@media screen and (max-width:480px){
+		padding: 80px 0px;
+	}
+	&__title{
+		font-family: lato;
+		font-size: 72px;
+		font-weight: 400;
+		margin-bottom: 35px;
+		text-transform: uppercase;	
+	}
+	&__subtitle{
+		font-family: Georgia;
+		font-style: italic;
+		font-size: 24px;
+		color: #606060;
+		margin-top: 0;
+		margin-bottom: 65px;	
+	}
+}

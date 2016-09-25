@@ -1,0 +1,17 @@
+.btn{
+	padding: 25px 33px;	
+	border: 1px solid #959595;
+	font-family:lato;
+	font-size: 14px;	
+	color: #303030;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:0.2s all ease;
+	&:hover{
+		background-color: #606060;
+		color: #fff;
+	}
+	@media screen and (max-width:480px){
+		display: none;
+	}
+}

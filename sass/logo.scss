@@ -1,0 +1,19 @@
+.logo{
+	width: 42px;
+	height: 42px;
+	box-sizing: border-box;
+	background-color:#222;
+	color: #fff;
+	font-family: Lato;
+	font-weight: 400;
+	text-decoration: none;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media screen and (max-width: 480px){
+			width: 60px;
+			height: 60px;
+			font-size: 26px;
+		}
+}
